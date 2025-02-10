@@ -35,7 +35,7 @@ Bu akıllı kontrat, ERC20 token'ları için güvenli ve esnek bir vesting (zama
 
 1. Repo'yu klonlayın:
 ```bash
-git clone https://github.com/sarp07/token-vesting.git
+git clone https://github.com/sarp07/Token_Vesting.git token-vesting
 cd token-vesting
 ```
 
