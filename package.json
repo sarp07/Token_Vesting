@@ -1,0 +1,39 @@
+{
+  "name": "token-vesting",
+  "version": "1.0.0",
+  "description": "ERC20 Token Vesting Smart Contract with decimal support",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "compile": "hardhat compile",
+    "deploy:testnet": "hardhat ignition deploy ignition/modules/deploy.js --network bscTestnet",
+    "deploy:mainnet": "hardhat ignition deploy ignition/modules/deploy.js --network bsc",
+    "verify:testnet": "hardhat verify --network bscTestnet",
+    "verify:mainnet": "hardhat verify --network bsc",
+    "clean": "hardhat clean",
+    "node": "hardhat node",
+    "accounts": "hardhat accounts",
+    "format": "prettier --write 'contracts/**/*.sol' 'test/**/*.js' 'ignition/**/*.js'"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.2.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.18",
+    "prettier": "^3.2.5",
+    "prettier-plugin-solidity": "^1.3.1"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart-contracts",
+    "hardhat",
+    "vesting",
+    "token",
+    "erc20"
+  ],
+  "author": "SOLAZAN",
+  "license": "MIT"
+}
