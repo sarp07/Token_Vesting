@@ -9,7 +9,7 @@
     "test:gas": "REPORT_GAS=true hardhat test",
     "compile": "hardhat compile",
     "deploy:testnet": "hardhat run scripts/deploy.js --network bscTestnet",
-    "deploy:mainnet": "hardhat ignition deploy ignition/modules/deploy.js --network bsc",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network bsc",
     "verify:testnet": "hardhat verify --network bscTestnet",
     "verify:mainnet": "hardhat verify --network bsc",
     "clean": "hardhat clean",
