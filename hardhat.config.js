@@ -1,34 +1,40 @@
 require("@nomicfoundation/hardhat-toolbox");
-require('dotenv').config();
+require("dotenv").config();
 
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const BSCSCAN_API_KEY = process.env.BSCSCAN_API_KEY;
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
+const BSCSCAN_API_KEY = process.env.BSCSCAN_API_KEY || "";
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.20",
+  solidity: {
+    version: "0.8.24",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    }
+  },
   networks: {
+    bscTestnet: {
+      url: "https://data-seed-prebsc-1-s1.binance.org:8545",
+      chainId: 97,
+      accounts: [PRIVATE_KEY],
+      gasPrice: 20000000000,
+      blockExplorerUrl: "https://testnet.bscscan.com"
+    },
     bsc: {
       url: "https://bsc-dataseed.binance.org/",
       chainId: 56,
-      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
-    },
-    bscTestnet: {
-      url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
-      chainId: 97,
-      accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+      accounts: [PRIVATE_KEY],
+      gasPrice: 5000000000,
+      blockExplorerUrl: "https://bscscan.com"
     }
   },
   etherscan: {
-    apiKey: {
-      bsc: BSCSCAN_API_KEY,
-      bscTestnet: BSCSCAN_API_KEY,
-    },
+    apiKey: BSCSCAN_API_KEY
   },
-  paths: {
-    sources: "./contracts",
-    tests: "./test",
-    cache: "./cache",
-    artifacts: "./artifacts"
+  sourcify: {
+    enabled: true
   }
 };

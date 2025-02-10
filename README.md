@@ -89,7 +89,7 @@ npm run deploy:mainnet
 Deploy edilen kontratları BSCScan'de doğrulamak için:
 
 1. BSCScan API key'inizi alın:
-   - https://bscscan.com/apis adresine gidin
+   - https://bscscan.com/myapikey adresine gidin
    - API key oluşturun
    - `.env` dosyasına `BSCSCAN_API_KEY` olarak ekleyin
 
