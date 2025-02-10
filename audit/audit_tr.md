@@ -92,7 +92,7 @@ TokenVesting kontratı, güvenli ve endüstri standartlarına uygun şekilde gel
 
 ## Denetçi Bilgileri
 
-- **Denetim Tarihi**: 13 Mart 2024
+- **Denetim Tarihi**: 10 Şubat 2025
 - **Solidity Versiyonu**: 0.8.20
 - **OpenZeppelin Versiyonu**: 5.0.1
 - **Test Coverage**: %100
